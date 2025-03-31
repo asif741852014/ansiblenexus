@@ -17,6 +17,7 @@
     - name: Check nexus folder stats
       ansible.builtin.stat:
         path: /opt/nexus
+      become: yes
       register: stat_result
     - name: Download Nexus
       ansible.builtin.get_url:
